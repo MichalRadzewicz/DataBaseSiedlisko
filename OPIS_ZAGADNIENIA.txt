@@ -1,0 +1,26 @@
+Baza jest częścią systemu zarządzającego pewną siecią domków turystycznych na Mazurach.
+Baza składa się z różnych tabel, które zostały powiązane relacjami.
+Może ona posłużyć właścicielowi do zwiększenia organizacji oraz polepszenia komfortu pracy.
+W posiadaniu siedliska znajdują się domki o różnych kategoriach standardu. Domek w zależności od kategorii oraz ilości osób mogących w nim 
+przebywać ma różną cenę za noc. Do każdego apartamentu przysługuję jeden parking. Osoby wynajmujące domki - Klienci posiadają imię, nazwisko
+oraz numer dokumentu. Klient może zarezerwować apartament podając datę zameldowania oraz datę wymeldowania. Baza posiada również informację na temat 
+aktualnych mieszkańców siedliska.
+
+Spis tabel:
+- Klienci <- zawiera informacje o klientach
+- Rezerwacje <- zawiera informacje o rezerwacjach
+- Wszyscy_mieszkancy <- zawiera informacje o wszystkich mieszańcach obecnych w ośrodku
+- Domki <- zawiera informację o domkach
+- Kategorie <- zawiera informacje o kategorii domku
+- Parking <- zawiera informacje o numerze miejsca parkingowego i numerze prakingu
+
+Relacje:
+- Klienci <-> Rezerwacje 1..* (jeden klient może mieć wiele rezerwacji)
+- Rezerwacje <-> Wszyscy_mieszkancy 1..* (jedna rezerwacja może obejmować wielu mieszkańców)
+- Rezerwacje <-> Domki *..1 (wiele rezerwacji może być przypisanych do jednego domku)
+- Domki <-> Parking 1..1 (na jeden domek przypada jedno miejsce parkingowe)
+- Domki <-> Kategorie *..1 (wiele domków może należeć do tej samej kategorii)
+
+
+
+
